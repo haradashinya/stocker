@@ -1,0 +1,18 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+
+<a href="/new_todo">create new todo</a>
+<ul>
+{%for todo in todos %}
+<li>
+{{todo.task}}<a href="/todos/{{todo.id}}">edit</a></li>
+{%endfor %}
+</ul>
+
+{% endblock %}
+
+
+
+

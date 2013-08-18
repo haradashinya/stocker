@@ -1,0 +1,20 @@
+
+{%extends "base.html" %}
+{%block content %}
+
+<h1>{{todo.task}}</h1>
+<form action="/todos/{{todo.id}}" method="POST">
+<input type="hidden" name="_method" value="PUT"/>
+<input type="text" name="task" />
+<input type="submit">PUT</input>
+</form>
+
+
+<form action="/todos/{{todo.id}}" method="POST">
+<input type="hidden" name="_method" value="DELETE"/>
+<input type="submit">DELETE</input>
+</form>
+
+
+{%endblock content %}
+

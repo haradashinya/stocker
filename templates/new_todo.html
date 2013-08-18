@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/todos" method="POST">
+<input type="text" name="task" />
+<input type="submit">POST</input>
+</form>
+{% endblock %}
